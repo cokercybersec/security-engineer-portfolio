@@ -1,0 +1,24 @@
+# Cleanup for Project 4. Run these yourself in AWS CloudShell after you have your screenshots.
+# They remove only the two test users and the lab policy. Read each line before you run it.
+
+ACCT=$(aws sts get-caller-identity --query Account --output text)
+
+# Detach policies from test user 1, then remove its login profile and the user
+aws iam detach-user-policy --user-name ar-test-nomfa --policy-arn arn:aws:iam::$ACCT:policy/RequireMFA-Lab
+aws iam detach-user-policy --user-name ar-test-nomfa --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
+aws iam delete-login-profile --user-name ar-test-nomfa
+aws iam delete-user --user-name ar-test-nomfa
+
+# Test user 2: delete its access key(s), then the user
+for KEY in $(aws iam list-access-keys --user-name ar-test-key --query 'AccessKeyMetadata[].AccessKeyId' --output text); do
+  aws iam delete-access-key --user-name ar-test-key --access-key-id $KEY
+done
+aws iam delete-user --user-name ar-test-key
+
+# Delete the lab policy
+aws iam delete-policy --policy-arn arn:aws:iam::$ACCT:policy/RequireMFA-Lab
+
+# Verify nothing is left
+aws iam list-users --query 'Users[?starts_with(UserName, `ar-test`)].UserName' --output text
+aws iam list-policies --scope Local --query 'Policies[?PolicyName==`RequireMFA-Lab`].PolicyName' --output text
+# Both lines above should print nothing.
