@@ -13,4 +13,4 @@ By Isaac Coker. Focus: cloud security, GRC, and controls mapped to NIST 800-53.
 
 ## How to read a project folder
 
-Each folder has a README with the goal, method, real results and limits, a RUNBOOK to repeat the lab, and a cleanup file so nothing is left running. Sample data that is invented is labeled SYNTHETIC in the file name.
+Each folder has a README with the goal, method, real results and limits. Lab projects also include a RUNBOOK to repeat the work and cleanup commands so nothing is left running. Sample data that is invented is labeled SYNTHETIC in the file name.
