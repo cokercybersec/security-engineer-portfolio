@@ -11,7 +11,8 @@ By Isaac Coker. Focus: cloud security, GRC, and controls mapped to NIST 800-53.
 | [Project 4: AWS IAM access review and MFA enforcement](project4_iam_access_review) | A read only Python access review that flagged a planted weakness in a lab AWS account, plus an MFA required policy proven with the IAM policy simulator. Mapped to NIST 800-53 AC-2, IA-2, IA-5 and AC-6. | Complete |
 | [Project 5: Risk register for an AWS security lab](project5_risk_register) | 14 scored risks built from the real results of Projects 3 and 4, mapped to NIST CSF 2.0 and 800-53, each with a treatment decision and a target score. | Complete |
 | [Project 6: Vendor security questionnaire and risk scoring](project6_vendor_risk) | A 30 question third party questionnaire across the six NIST CSF 2.0 functions, a scoring rubric with gating questions, a worked assessment of a fictional vendor, contract clauses and a one page executive summary. | Complete |
-| Project 7: Policy pack | Plain language policies mapped to NIST CSF 2.0. | Next |
+| [Project 7: Policy pack](project7_policy_pack) | A plain language data classification standard with four levels and 12 handling rules, a one page acceptable use policy, and 17 policy elements mapped to NIST CSF 2.0 and 800-53. Templates, not reviewed by a lawyer and not adopted by any organization. | Complete |
+| Project 8: Security awareness campaign | A short awareness campaign built on the policy pack. | Next |
 
 ## How to read a project folder
 
