@@ -12,7 +12,24 @@ By Isaac Coker. Focus: cloud security, GRC, and controls mapped to NIST 800-53.
 | [Project 5: Risk register for an AWS security lab](project5_risk_register) | 14 scored risks built from the real results of Projects 3 and 4, mapped to NIST CSF 2.0 and 800-53, each with a treatment decision and a target score. | Complete |
 | [Project 6: Vendor security questionnaire and risk scoring](project6_vendor_risk) | A 30 question third party questionnaire across the six NIST CSF 2.0 functions, a scoring rubric with gating questions, a worked assessment of a fictional vendor, contract clauses and a one page executive summary. | Complete |
 | [Project 7: Policy pack](project7_policy_pack) | A plain language data classification standard with four levels and 12 handling rules, a one page acceptable use policy, and 17 policy elements mapped to NIST CSF 2.0 and 800-53. Templates, not reviewed by a lawyer and not adopted by any organization. | Complete |
-| Project 8: Security awareness campaign | A short awareness campaign built on the policy pack. | Next |
+| Project 8: Security awareness campaign | A four week awareness campaign plan with measures that matter and a phishing exercise design. | Next |
+| Project 9: Disaster recovery | A recovery plan tested with a real restore, with the measured times. | Planned |
+| Project 10: Audit readiness | An evidence index and a remediation tracker built from the earlier projects. | Planned |
+
+## Roadmap: governance, risk and audit
+
+The next phase of the portfolio, planned one project a week. Dates can move. A project moves to the table above only when its folder is finished.
+
+| Project | What it will show | Status |
+| --- | --- | --- |
+| Project 11: NIST CSF 2.0 gap assessment | Current and target profile for a lab security program, with the gaps ranked by risk. | Planned |
+| Project 12: SOC 2 readiness | The Security criteria mapped to evidence the portfolio already holds, and the evidence still missing. | Planned |
+| Project 13: Incident response and tabletop | An incident response plan, a fictional scenario and an after action report. | Planned |
+| Project 14: Security metrics | Eight metrics, each tied to a decision, with an executive dashboard built on labeled example data. | Planned |
+| Project 15: Internal audit | Five controls from this portfolio tested, with workpapers and findings. | Planned |
+| Project 16: Privacy impact assessment | A data inventory and impact assessment for a fictional customer portal. | Planned |
+| Project 17: Security program charter | A program charter and a 12 month roadmap. | Planned |
+| Project 18: Continuous control monitoring | A control testing calendar and an exceptions register. | Planned |
 
 ## How to read a project folder
 
