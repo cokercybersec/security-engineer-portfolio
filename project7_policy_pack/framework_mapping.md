@@ -1,0 +1,25 @@
+# Framework Mapping
+
+Each policy element is mapped to a NIST CSF 2.0 subcategory and to NIST SP 800-53 Rev. 5 controls. These are my study mappings, not an official crosswalk.
+
+| Policy element | Document | NIST CSF 2.0 | NIST 800-53 Rev. 5 |
+| --- | --- | --- | --- |
+| Four classification levels with an owner for every data set | Classification standard | ID.AM-05 Assets prioritized by classification, criticality and impact | RA-2 |
+| Labeling and the data inventory for Restricted data | Classification standard | ID.AM-07 Inventories of data are maintained | MP-3, CM-8 |
+| Access limited to named people, reviewed quarterly for Restricted | Classification standard | PR.AA-05 Access permissions follow least privilege and separation of duties | AC-2, AC-3, AC-6 |
+| Encryption at rest for Confidential and Restricted | Classification standard | PR.DS-01 Data at rest is protected | SC-28 |
+| Encryption in transit and rules for email and chat | Classification standard | PR.DS-02 Data in transit is protected | SC-8 |
+| Rules for sharing outside the company and with AI tools | Classification standard, AUP | PR.DS-02 Data in transit is protected | AC-21, SC-8 |
+| Encrypted backups and a yearly restore test for Restricted | Classification standard | PR.DS-11 Backups are created, protected, maintained and tested | CP-9 |
+| Retention, secure wipe and destruction | Classification standard | ID.AM-08 Data is managed throughout its life cycle | MP-6, SI-12 |
+| Own account, multi factor authentication, no shared credentials | AUP | PR.AA-03 Users and devices are authenticated | IA-2, IA-5 |
+| Screen lock and updates | AUP | PR.PS-01 Configuration management practices are applied | AC-11, CM-6 |
+| Approved software and devices only | AUP | PR.PS-02 Software is maintained and removed based on risk | CM-7, CM-11 |
+| Report incidents and phishing the same day, no retaliation | AUP, Classification standard | RS.CO-02 Stakeholders are notified of incidents | IR-6, AT-2 |
+| Written acknowledgement at hire and every year | AUP | PR.AT-01 Personnel are given awareness and training | AT-2, PL-4 |
+| Monitoring notice | AUP | DE.CM-03 Personnel activity and technology use are monitored | AC-8, SI-4 |
+| Exceptions approved, time limited and logged in the risk register | AUP | ID.RA-06 Risk responses are chosen, planned and tracked | RA-7, CA-5 |
+| Enforcement and sanctions | AUP | GV.PO-01 Policy is established, communicated and enforced | PS-8, PL-4 |
+| Policy owner, version control and yearly review | Both documents | GV.PO-02 Policy is reviewed and updated | PL-1 |
+
+Total: 17 mappings.
