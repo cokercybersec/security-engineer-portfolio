@@ -6,6 +6,29 @@ A home lab that turns a home network into something I can watch, with a free net
 
 Detect and review what is happening on my own network, the way a small security team would: collect the traffic, read the alerts, decide what is normal, and fix what is not.
 
+## About Security Onion
+
+Security Onion is a free and open source platform for network security monitoring, log management and threat hunting. Its project describes it as built by defenders for defenders. In practice it works as an open source SIEM: it collects security data from the network and from endpoints, stores it in one place, and gives an analyst one console to search it, review alerts and document what they find.
+
+A SIEM (security information and event management) tool matters because no one can read raw logs from every device. It collects them, correlates them and surfaces the few that need a decision. Commercial SIEMs can be expensive, so a free one makes it possible to practice the same workflow at home.
+
+| Component | What it does |
+| --- | --- |
+| Suricata | Network intrusion detection. Raises alerts when traffic matches a detection rule. |
+| Zeek | Network metadata. Logs connections and protocols such as DNS, HTTP and TLS. |
+| Stenographer | Full packet capture to disk, so traffic can be retrieved later. |
+| Elasticsearch | The central store that all logs flow into and are searched from. |
+| Elastic Agent and Fleet | Collect data from endpoints and manage those agents centrally. |
+| osquery | Live questions asked of endpoints. |
+| Strelka | Analyzes files extracted from network traffic. |
+| Syslog ingestion | Brings in logs from devices that cannot run an agent, such as routers and firewalls. |
+| Intrusion Detection Honeypot | A decoy node that alerts when something touches it. |
+| CyberChef | Decodes and analyzes data found during an investigation. |
+
+Analysts work in the Security Onion Console, a web interface with these main pages: Alerts, Dashboards, Hunt, Cases, PCAP and Detections. Alerts lists what Suricata flagged. Dashboards and Hunt are for searching network metadata and logs. Cases records an investigation. PCAP retrieves captured packets. Detections is where detection rules are tuned.
+
+In this lab I used it as a network sensor: Suricata for alerts and Zeek for network metadata, reviewed in the console. I did not use every component above. The list shows what the platform can do, not what I deployed. Details are in the [Security Onion documentation](https://docs.securityonion.net/en/2.4/introduction.html).
+
 ## What I built
 
 Security Onion in a VirtualBox virtual machine on a Windows PC, next to a Kali Linux VM used as a test machine. Security Onion has two network interfaces. One is for management. The other is for monitoring only, has no IP address, and receives a mirrored copy of network traffic from a managed switch through a USB gigabit network adapter. Security Onion reads that traffic with Suricata for alerts and Zeek for network metadata, and I review it in its web console.
